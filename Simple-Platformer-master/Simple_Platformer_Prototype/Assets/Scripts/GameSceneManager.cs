@@ -20,8 +20,8 @@ public class GameSceneManager : MonoBehaviour
         Time.timeScale = 1;
 
         player.OnHitGoomba += OnHitGoomba;
-        player.OnHitSpike += OnGameOver;
-        player.OnHitOrb += OnGameWin;
+        player.OnHitspike += OnGameOver;
+        player.OnHitOrv += OnGameWin;
 
         scoreText.enabled = true;
         gameOverText.enabled = false;

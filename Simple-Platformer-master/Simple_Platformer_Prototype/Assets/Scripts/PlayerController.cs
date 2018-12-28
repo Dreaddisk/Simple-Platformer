@@ -59,15 +59,8 @@ public class PlayerController : MonoBehaviour
         {
             canJump = true;
         }
-        if(collision.gameObject.GetComponent<SpikeController>() != null)
-        {
-            if(OnHitSpike != null)
-            {
-                OnHitSpike();
-            }
-        }
 
-        else if (collision.gameObject.GetComponent<EnemyController>() != null)
+        if (collision.gameObject.GetComponent<EnemyController>() != null)
         {
             EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
 
@@ -88,12 +81,6 @@ public class PlayerController : MonoBehaviour
                 {
                     OnHitGoomba();
                 }
-            }
-        }else if(collision.gameObject.GetComponent<OrbController>() != null)
-        {
-            if(OnHitOrb != null)
-            {
-                OnHitOrb();
             }
         }
 
